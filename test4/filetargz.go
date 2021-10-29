@@ -26,7 +26,7 @@ func main() {
    
    
     // 遍历文件列表
-   
+   ///sadasda
        
         // 打开文件
         fg, err := os.Open("test4")
