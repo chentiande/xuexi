@@ -1,0 +1,66 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "this is xiayuedu backend server",
+        "title": "xiayuedu backend api",
+        "termsOfService": "https://xiayuedu.com",
+        "contact": {
+            "name": "www.xiayuedu.com",
+            "url": "https://xiayuedu.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://xiayuedu.com"
+        },
+        "version": "1.0"
+    },
+    "host": "127.0.0.1:8089",
+    "basePath": "/api/v1",
+    "paths": {
+        "/hello": {
+            "get": {
+                "description": "hellohandler",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "测试"
+                ],
+                "summary": "hellohandler",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "名字",
+                        "name": "name",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "年龄",
+                        "name": "age",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"msg\":\"\"hello razeen\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"msg\":\"\"who are you\"}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

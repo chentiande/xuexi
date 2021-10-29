@@ -1,0 +1,45 @@
+basePath: /api/v1
+host: 127.0.0.1:8089
+info:
+  contact:
+    name: www.xiayuedu.com
+    url: https://xiayuedu.com
+  description: this is xiayuedu backend server
+  license:
+    name: Apache 2.0
+    url: https://xiayuedu.com
+  termsOfService: https://xiayuedu.com
+  title: xiayuedu backend api
+  version: "1.0"
+paths:
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: hellohandler
+      parameters:
+      - description: 名字
+        in: query
+        name: name
+        required: true
+        type: string
+      - description: 年龄
+        in: query
+        name: age
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"msg":""hello razeen"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg":""who are you"}'
+          schema:
+            type: string
+      summary: hellohandler
+      tags:
+      - 测试
+swagger: "2.0"
